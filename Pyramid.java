@@ -10,12 +10,12 @@ class Pyramid{
 		pyramid.pyramidTwo(rows);
 		pyramid.pyramidThree(rows);
 		pyramid.pyramidFour(rows);
-		/*pyramid.pyramidFive(rows);*/
+		pyramid.pyramidFive(rows);
 		pyramid.pyramidSix(rows);
 		pyramid.pyramidSeven(rows);
 		pyramid.pyramidEight(rows);
 		pyramid.pyramidNine(rows);
-		/*pyramid.pyramidTen(rows);*/
+		pyramid.pyramidTen(rows);
 	}
 	
 	public void pyramidOne(int rows){
@@ -80,13 +80,12 @@ class Pyramid{
 		int num=1;
 		for(int r=1;r<=rows;r++){
 			for(int c=1;c<=rows;c++){
-				if(c<=r || c==1  || r+c>=(rows+1)){
-					System.out.print(num+" ");
+				if(c<=r || r+c>=rows+1){
+					System.out.print(num +"\t");
 					num++;
 				}else{
-					System.out.print(num+" ");
-					
-				}
+					System.out.print("\t");
+					}
 			}
 			System.out.println();
 		}
@@ -157,12 +156,12 @@ class Pyramid{
 		int num=1;
 		for(int r=1;r<=rows;r++){
 			for(int c=1;c<=rows;c++){
-				if(c<=r && c==1 && r==1 || r+c<=(rows+1)){
-					System.out.print(num+" ");
+				if(c<=r || (r+c)<=(rows+1)){
+					System.out.print(num+"\t");
 					num++;
 				}else{
-					System.out.print(num+" ");
-					
+					System.out.print("\t");
+					num++;
 				}
 			}
 			System.out.println();
